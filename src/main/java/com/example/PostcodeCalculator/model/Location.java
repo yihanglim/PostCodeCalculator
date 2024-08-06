@@ -1,4 +1,4 @@
-package com.example.PostcodeCalculator.entity;
+package com.example.PostcodeCalculator.model;
 
 public class Location {
     private String postcode;
@@ -23,15 +23,15 @@ public class Location {
         return latitude;
     }
 
-/*    public void setPostcode(String postcode) {
-        this.postcode = postcode;
-    }
-
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
-
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }*/
+//    public void setPostcode(String postcode) {
+//        this.postcode = postcode;
+//    }
+//
+//    public void setLongitude(double longitude) {
+//        this.longitude = longitude;
+//    }
+//
+//    public void setLatitude(double latitude) {
+//        this.latitude = latitude;
+//    }
 }

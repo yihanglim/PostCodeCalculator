@@ -1,4 +1,4 @@
-package com.example.PostcodeCalculator.entity;
+package com.example.PostcodeCalculator.model;
 
 public class DistanceResult {
     private Location location1;
