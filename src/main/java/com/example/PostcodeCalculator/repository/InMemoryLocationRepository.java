@@ -56,11 +56,13 @@ public class InMemoryLocationRepository implements LocationRepository {
     }
 
     public Location findCoordinateByPostCode(String postcode){
+        writeToLog(String.format("GET Request,%s ", postcode));
         return locationList.get(postcode);
     }
 
     public void updateCoordinateByPostCode(String postcode, String latitude, String longitude) {
         locationList.put(postcode, new Location(postcode, toDoubleOrNull(latitude), toDoubleOrNull(longitude)));
+        writeToLog(String.format("PUT Request,postcode,%s,latitude,%s,Longtitude,%s ", postcode, latitude, longitude));
         // skip updating the csv file for now as csv only support rewrite the whole file which will takes long.
         // writeToCSV(locationList);
     }

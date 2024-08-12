@@ -13,8 +13,9 @@ public class helper {
     public static void writeToLog(String errorMessage){
         try {
             FileWriter obj = new FileWriter("E:\\Programming\\JAVA\\PostcodeCalculator\\logs\\logs.csv", true);
-            obj.write(errorMessage);
             obj.write(java.time.LocalDateTime.now().format(formatter));
+            obj.write(separator);
+            obj.write(errorMessage);
             obj.write("\n");
             obj.close();
         } catch(Exception e){
