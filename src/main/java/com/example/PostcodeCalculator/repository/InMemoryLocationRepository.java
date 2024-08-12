@@ -11,7 +11,6 @@ import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.example.PostcodeCalculator.service.helper.writeToCSV;
 import static com.example.PostcodeCalculator.service.helper.writeToLog;
 
 @Repository
@@ -62,7 +61,8 @@ public class InMemoryLocationRepository implements LocationRepository {
 
     public void updateCoordinateByPostCode(String postcode, String latitude, String longitude) {
         locationList.put(postcode, new Location(postcode, toDoubleOrNull(latitude), toDoubleOrNull(longitude)));
-        writeToCSV(locationList);
+        // skip updating the csv file for now as csv only support rewrite the whole file which will takes long.
+        // writeToCSV(locationList);
     }
 
 }
